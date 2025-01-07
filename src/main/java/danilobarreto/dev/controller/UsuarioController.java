@@ -30,7 +30,7 @@ public class UsuarioController implements Serializable {
         return usuarios = usuarioService.listar();
     }
 
-    public void create(){
+    public void novo(){
         usuario = new Usuario();
     }
 
@@ -62,7 +62,7 @@ public class UsuarioController implements Serializable {
             usuarioService.create(usuario);
             FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Save"));
         }
-        create();
+        save();
         PrimeFaces.current().ajax().update("form:messages", "form:dt-usuarios");
         PrimeFaces.current().executeScript("PF('dlgUsuario').hide();");
     }
