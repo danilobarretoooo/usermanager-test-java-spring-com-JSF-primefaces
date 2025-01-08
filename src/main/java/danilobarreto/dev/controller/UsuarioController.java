@@ -11,14 +11,13 @@ import org.primefaces.PrimeFaces;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.io.Serializable;
 import java.util.List;
 
 @Getter
 @Setter
 @Component(value = "usuarioMB")
 @ViewScoped
-public class UsuarioController implements Serializable {
+public class UsuarioController{
 
     @Autowired
     private IUsuarioService usuarioService;

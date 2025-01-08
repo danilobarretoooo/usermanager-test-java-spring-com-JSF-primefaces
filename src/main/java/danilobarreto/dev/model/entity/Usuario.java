@@ -4,8 +4,6 @@ package danilobarreto.dev.model.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.io.Serializable;
-
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -13,12 +11,11 @@ import java.io.Serializable;
 @Builder
 @Entity
 @Table(name = "usuario")
-public class Usuario implements Serializable {
+public class Usuario{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(name = "usuario")
     private String usuario;
     private String email;
 

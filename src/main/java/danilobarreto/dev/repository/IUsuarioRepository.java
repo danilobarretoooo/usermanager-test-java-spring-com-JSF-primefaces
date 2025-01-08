@@ -1,8 +1,9 @@
 package danilobarreto.dev.repository;
 
 import danilobarreto.dev.model.entity.Usuario;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface IUsuarioRepository extends CrudRepository<Usuario, Integer> {
+
+public interface IUsuarioRepository extends JpaRepository<Usuario, Long> {
 
 }
